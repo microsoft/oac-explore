@@ -13,7 +13,7 @@ python install_mujoco.py
 conda env create -f environment.yml
 ```
 
-To run Soft Actor Critic on Humanoid with seed ```0```, run
+To run Soft Actor Critic on Humanoid with seed ```0``` as a baseline to compare against Optimistic Actor Critic, run
 
 ```
 python main.py --seed=0 --domain=humanoid

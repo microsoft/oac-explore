@@ -6,6 +6,13 @@ This repository contains the code accompanying the NeurIPS 2019 paper 'Better Ex
 
 For software dependencies, please have a look inside the ```environment``` folder, you can either build the Dockerfile, create a conda environment with ```environment.yml``` or pip environment with ```environments.txt```.
 
+To create the conda environment, ```cd``` into the ```environment``` folder and run:
+
+```
+python install_mujoco.py
+conda env create -f environment.yml
+```
+
 To run Soft Actor Critic on Humanoid with seed ```0```, run
 
 ```

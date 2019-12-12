@@ -123,23 +123,12 @@ def plot(values, label, color=[0, 0, 1, 1]):
 
 
 # DOMAINS = ['humanoid', 'halfcheetah', 'hopper', 'ant', 'walker2d']
-# DOMAINS = ['ant']
-# DOMAINS = ['humanoid']
-DOMAINS = ['halfcheetah']
+DOMAINS = ['humanoid']
 
-# Fill these in
-RLKIT_BASE_LOG_DIR_ALGO = None
-RLKIT_BASE_LOG_DIR_BASELINE = None
+RLKIT_BASE_LOG_DIR_BASELINE = RLKIT_BASE_LOG_DIR_ALGO = './data'
 
 RUN_IDXES = list([i for i in range(5)])
 NUM_RUN = len(RUN_IDXES)
-
-SAC_FOUR_RETRAINING_PARAMS = dict(
-    delta=0.0,
-    beta_UB=0.0,
-    num_expl_steps_per_train_loop=1000,
-    num_trains_per_train_loop=4000
-)
 
 
 SAC_ONE_RETRAINING_PARAMS = dict(
@@ -182,24 +171,11 @@ def sac_plot_one_retraining_step(domain):
     results = smooth_results(results)
 
     if FORMAL_FIG:
-        label = 'Soft Actor Critic (State of the Art)'
+        label = 'Soft Actor Critic'
     else:
         label = 'SAC'
 
     plot(results, label=label)
-
-
-def sac_plot_four_retraining_step(domain):
-
-    args = get_cmd_args()
-
-    set_attr_with_dict(args, SAC_FOUR_RETRAINING_PARAMS)
-
-    results = get_one_domain_all_run_res(
-        domain, RUN_IDXES, SAC_FOUR_RETRAINING_PARAMS)
-    results = smooth_results(results)
-
-    plot(results, label='SAC')
 
 
 def sac_plot(domain, num_trains_per_train_loop):
@@ -234,19 +210,6 @@ def get_plot_title(args):
 
 
 all_hyper_params_dict = [
-    dict(
-        delta=0.0,
-        beta_UB=0.0,
-        num_expl_steps_per_train_loop=1000,
-        num_trains_per_train_loop=1000
-    ),
-
-    dict(
-        delta=23.53,
-        beta_UB=0.0,
-        num_expl_steps_per_train_loop=1000,
-        num_trains_per_train_loop=1000
-    ),
     dict(
         delta=23.53,
         beta_UB=4.66,

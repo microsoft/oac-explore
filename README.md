@@ -49,6 +49,21 @@ Note that we are able to remove an hyperparameter relative to the code used for 
 
 This reposity was based on [rlkit](https://github.com/vitchyr/rlkit).
 
+# Citation
+
+If you use the codebase, please cite the paper:
+
+```
+@misc{oac,
+    title={Better Exploration with Optimistic Actor-Critic},
+    author={Kamil Ciosek and Quan Vuong and Robert Loftin and Katja Hofmann},
+    year={2019},
+    eprint={1910.12807},
+    archivePrefix={arXiv},
+    primaryClass={stat.ML}
+}
+```
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a

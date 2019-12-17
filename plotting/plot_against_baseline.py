@@ -143,7 +143,7 @@ SAVE_FIG = True
 
 print('SAVE_FIG', SAVE_FIG)
 
-FORMAL_FIG = False
+FORMAL_FIG = True
 
 print('FORMAL_FIG', FORMAL_FIG)
 
@@ -322,6 +322,8 @@ for hyper_params in all_hyper_params_dict:
                 graph_base_path, f'{args.env}_formal_fig_{FORMAL_FIG}.png')
 
             plt.savefig(fig_path, bbox_inches='tight')
+
+            print(f'Saved fig at {fig_path}')
 
     print('Finish plotting for: ', hyper_params)
 

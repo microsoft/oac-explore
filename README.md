@@ -2,6 +2,22 @@
 
 This repository contains the code accompanying the NeurIPS 2019 paper 'Better Exploration with Optimistic Actor Critic'.
 
+# Reproducing Results
+
+The bash script ```reproduce.sh``` will run Soft Actor Critic and Optimistic Actor Critic on the environment ```Humanoid-v2```, each with 5 seeds. It is recommended you execute this script on a machine with sufficient resources.
+
+After the script finishes, to plot the learning curve, you can run
+
+```
+python -m plotting.plot_against_baseline
+```
+
+which should produce the following graph
+
+![oac_vs_sac](humanoid-v2_formal_fig_True.png)
+
+The result in the paper was produced by modifying the Tensorflow code as provided in the [softlearning](https://github.com/rail-berkeley/softlearning) repo.
+
 # Running Experiments
 
 For software dependencies, please have a look inside the ```environment``` folder, you can either build the Dockerfile, create a conda environment with ```environment.yml``` or pip environment with ```environments.txt```.
@@ -24,22 +40,6 @@ To run Optimistic Actor Critic on Humanoid with seed ```0```,
 ```
 python main.py --seed=0 --domain=humanoid --beta_UB=4.66 --delta=23.53
 ```
-
-# Reproducing Results
-
-The bash script ```reproduce.sh``` will run Soft Actor Critic and Optimistic Actor Critic on the environment ```Humanoid-v2```, each with 5 seeds. It is recommended you execute this script on a machine with sufficient resources.
-
-After the script finishes, to plot the learning curve, you can run
-
-```
-python -m plotting.plot_against_baseline
-```
-
-which should produce the following graph
-
-![oac_vs_sac](humanoid-v2_formal_fig_True.png)
-
-The result in the paper was produced by modifying the Tensorflow code as provided in the [softlearning](https://github.com/rail-berkeley/softlearning) repo.
 
 # Hyper-parameter Selection
 

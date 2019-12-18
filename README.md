@@ -16,7 +16,7 @@ which should produce the following graph
 
 ![oac_vs_sac](humanoid-v2_formal_fig_True.png)
 
-The result in the paper was produced by modifying the Tensorflow code as provided in the [softlearning](https://github.com/rail-berkeley/softlearning) repo.
+Note that the result in the paper was produced by modifying the Tensorflow code as provided in the [softlearning](https://github.com/rail-berkeley/softlearning) repo.
 
 # Running Experiments
 

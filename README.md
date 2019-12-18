@@ -12,7 +12,7 @@ After the script finishes, to plot the learning curve, you can run
 python -m plotting.plot_against_baseline
 ```
 
-which should produce the following graph
+which should produce the graph below. Optimistic Actor Critic takes ~6 million timesteps to obtain an average episode return of 8000, while Soft Actor Critic requires 10 million steps. This represents a **~40%** improvement in sample efficiency.
 
 ![oac_vs_sac](humanoid-v2_formal_fig_True.png)
 

@@ -133,7 +133,7 @@ class BatchRLAlgorithm(metaclass=abc.ABCMeta):
                 gt.stamp('training', unique=False)
 
             # Wait for eval to finish
-            ray.wait([remote_eval_obj_id])
+            ray.get([remote_eval_obj_id])
             gt.stamp('remote evaluation wait')
 
             self._end_epoch(epoch)
@@ -142,7 +142,7 @@ class BatchRLAlgorithm(metaclass=abc.ABCMeta):
         self._log_stats(epoch)
 
         self.expl_data_collector.end_epoch(epoch)
-        ray.wait([self.remote_eval_data_collector.end_epoch.remote(epoch)])
+        ray.get([self.remote_eval_data_collector.end_epoch.remote(epoch)])
 
         self.replay_buffer.end_epoch(epoch)
         self.trainer.end_epoch(epoch)

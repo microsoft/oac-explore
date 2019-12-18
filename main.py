@@ -119,9 +119,9 @@ def experiment(variant, prev_exp_state=None):
         expl_path_collector.restore_from_snapshot(
             prev_exp_state['exploration'])
 
-        ray.wait([remote_eval_path_collector.restore_from_snapshot.remote(
+        ray.get([remote_eval_path_collector.restore_from_snapshot.remote(
             prev_exp_state['evaluation_remote'])])
-        ray.wait([remote_eval_path_collector.set_global_pkg_rng_state.remote(
+        ray.get([remote_eval_path_collector.set_global_pkg_rng_state.remote(
             prev_exp_state['evaluation_remote_rng_state']
         )])
 

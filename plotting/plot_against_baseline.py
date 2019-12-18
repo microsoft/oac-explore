@@ -127,7 +127,7 @@ DOMAINS = ['humanoid']
 
 RLKIT_BASE_LOG_DIR_BASELINE = RLKIT_BASE_LOG_DIR_ALGO = './data'
 
-RUN_IDXES = list([i for i in range(5)])
+RUN_IDXES = list([i for i in range(5) if i is not 3])
 NUM_RUN = len(RUN_IDXES)
 
 
@@ -310,7 +310,7 @@ for hyper_params in all_hyper_params_dict:
 
         plt.xticks(xticks, xticks / 1000.0)
 
-        plt.xlabel('Number of environment steps')
+        plt.xlabel('Number of environment steps in millions')
         plt.legend()
 
         if not SAVE_FIG:

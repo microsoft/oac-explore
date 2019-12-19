@@ -2,6 +2,8 @@
 
 This repository contains the code accompanying the NeurIPS 2019 paper 'Better Exploration with Optimistic Actor Critic'.
 
+If you are reading the code to understand how Optimistic Actor Critic works, have a look at the file ```optimistic_exploration.py```, which encapsulates the logic of optimistic exploration. The remaining files in the repository implement a generic version of Soft Actor Critic.
+
 # Reproducing Results
 
 The bash script ```reproduce.sh``` will run Soft Actor Critic and Optimistic Actor Critic on the environment ```Humanoid-v2```, each with 5 seeds. It is recommended you execute this script on a machine with sufficient resources.

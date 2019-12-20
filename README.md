@@ -22,6 +22,8 @@ Note that the result in the paper was produced by modifying the Tensorflow code 
 
 # Running Experiments
 
+The repository supports automatic saving and restoring from checkpoint. This is useful if you run experiments on pre-emptive cloud compute.
+
 For software dependencies, please have a look inside the ```environment``` folder, you can either build the Dockerfile, create a conda environment with ```environment.yml``` or pip environment with ```environments.txt```.
 
 To create the conda environment, ```cd``` into the ```environment``` folder and run:

@@ -127,7 +127,7 @@ DOMAINS = ['humanoid']
 
 RLKIT_BASE_LOG_DIR_BASELINE = RLKIT_BASE_LOG_DIR_ALGO = './data'
 
-RUN_IDXES = list([i for i in range(5) if i is not 3])
+RUN_IDXES = list([i for i in range(5)])
 NUM_RUN = len(RUN_IDXES)
 
 

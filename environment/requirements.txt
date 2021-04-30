@@ -69,7 +69,7 @@ ray[rllib,debug]==0.7.0
 redis==3.0.1
 requests==2.20.1
 robosuite==0.1.0
-rsa==3.4.2
+rsa==4.7
 ruamel-yaml==0.15.46
 s3transfer==0.2.0
 scikit-image==0.14.2

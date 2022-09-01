@@ -1,13 +1,15 @@
-{"Registrations":[ 
+{
+  "$schema": "https://json.schemastore.org/component-detection-manifest.json",
+  "Registrations": [
     {
-      "component": { 
-       "type": "git", 
-       "git": { 
-         "repositoryUrl": "https://github.com/rll/rllab", 
-         "commitHash": "ba78e4c16dc492982e648f117875b22af3965579" 
-         }
-       }
-    },
- ],
- "Version": 1
+      "component": {
+        "type": "git",
+        "git": {
+          "repositoryUrl": "https://github.com/rll/rllab",
+          "commitHash": "ba78e4c16dc492982e648f117875b22af3965579"
+        }
+      }
+    }
+  ],
+  "Version": 1
 }

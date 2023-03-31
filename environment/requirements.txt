@@ -66,7 +66,7 @@ PyWavelets==1.0.1
 PyYAML==5.1
 psutil==5.4.8
 ray[rllib,debug]==0.7.0
-redis==3.0.1
+redis==4.4.4
 requests==2.20.1
 robosuite==0.1.0
 rsa==3.4.2

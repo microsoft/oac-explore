@@ -27,7 +27,7 @@ gast==0.2.0
 gitdb2==2.0.5
 GitPython==2.1.11
 glfw==1.7.0
-grpcio==1.16.1
+grpcio==1.53.0
 gtimer==1.0.0b5
 git+https://github.com/openai/gym.git@f380a0e871ae7fa9593fb452433ee9055ddf02eb
 h5py==2.8.0

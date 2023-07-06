@@ -75,7 +75,7 @@ s3transfer==0.2.0
 scikit-image==0.14.2
 scikit-video==1.1.11
 scikit-learn==0.20.1
-scipy==1.1.0
+scipy==1.10.0
 setproctitle==1.1.10
 six==1.11.0
 smmap2==2.0.5
